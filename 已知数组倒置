@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	  int arr[5] = {200,100,350,76,98};
+	  int i;
+	  int arr2[5];
+	  for (i = 0; i < 5; i++)
+	  {
+		  arr2[4 - i] = arr[i];
+		  cout << arr[i] << "\t";
+	  }
+	  int j = 0;
+	  cout << endl;
+	  for (j = 0; j < 5; j++)
+	  {
+	  	cout << arr2[j]<<"\t";
+  	}
+}
