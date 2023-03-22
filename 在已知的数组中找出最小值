@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	  int arr[5] = {300,500,69,400,250};
+	  int i;
+	  int max=0;
+	  double mid;
+	  for (i = 0; i < 5; i++)
+  	{
+		    if (arr[i] >= max)
+			  max = arr[i];
+	  }
+	  mid = max / 2;
+	  for (i = 0; i < 5; i++)
+		  {
+			  if (arr[i] < mid)
+			  mid = arr[i];
+		  }
+	    cout << mid << endl;
+	    return 0;
+  }
