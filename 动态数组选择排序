@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	vector<int>arr;
+	int num;
+	while (cin >> num)
+	{
+		arr.push_back(num);
+		if (cin.get() == '\n')   //遇到回车，终止
+			break;
+	}
+	for (int i = 0; i < arr.size(); i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << arr.size()<<endl;
+	int j;
+	int temp;
+	int k;
+	for (j = 0; j < arr.size(); j++)/*比较的轮次*/
+	{
+		for (k = j + 1; k < arr.size(); k++)/*每轮数组内各元素进行比较*/
+		{
+			if (arr[j] > arr[k])
+			{
+				temp = arr[j];
+				arr[j] = arr[k];
+				arr[k] = temp;
+			}
+		}
+		cout << endl;
+		for (int i = 0; i < arr.size(); i++)
+		{
+			cout << arr[i] << " ";
+		}
+	}
+	return 0;
+}
