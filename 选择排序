@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[5] = { 36,35,12,45,7 };
+	for (int i = 0; i < 5; i++)
+	{
+		cout << arr[i]<<" ";
+	}
+	cout << endl;
+	int j;
+	int temp;
+	int k;
+	for (j = 0; j < 4; j++)/*比较的轮次*/
+	{
+		for (k=j+1; k < 5; k++)/*每轮数组内各元素进行比较*/
+		{
+			if (arr[j] > arr[k])
+			{
+				temp = arr[j];
+				arr[j] = arr[k];
+				arr[k] = temp;
+			}
+		}
+		cout << endl;
+		for (int i = 0; i < 5; i++)
+		{
+			cout << arr[i] << " ";
+		}
+	}
+	return 0;
+}
